@@ -1,0 +1,87 @@
+public class Main{
+    public static void main(String[] args){
+        boolean jugar = true;
+        do{
+            Opciones usuario, bot;
+            Scanner s = new Scanner(System.in);
+            //puedo relegar el tablero y el bot a una clase tablero
+            Opciones[][] tablero = new Opciones[3][3];
+            elegirLado();
+            juego();
+            volverAJugar();
+            //puedo agregar un eventListener para "salir"
+            }while(jugar)
+    }
+}
+
+    public void juego(){
+        if(quienEmpieza();){
+            System.out.println("Empiezas tu");
+            do{
+                    turnoUsuario();
+                    turnoBot();
+            }while(!ganador)
+        }else{
+            System.out.println("Empieza la maquina");
+            do{
+                    turnoBot();
+                    turnoUsuario();
+            }while(!ganador)
+        }
+    }
+
+    //true es que empieza el usuario
+    public boolean quienEmpieza(){
+        Random r = new Random
+        r.nextBoolen()
+    }
+
+    public void turnoBot(){
+        mostrarTablero();
+    }
+
+    public void turnoUsuario(){
+        mostrarTablero();
+    }
+
+    public void volverAJugar(){
+        boolean bandera;
+        do{
+            bandera = true;
+            System.out.println("Quiere volver a jugar? (si o no)");
+            a = s.nextLine
+            if (!a = .equals("si") && !a.equals("no")) {
+                bandera = false
+                }else{
+                    jugar = (a.equals("si"))?true:false;
+                }
+        }while(!bandera)
+    }
+
+    public void mostrarTablero(){
+        for(int i = 0;i<3;i++){
+            for(int j = 0; j<3; j++){
+                System.out.println(tablero[i][j].parseString());
+            }
+             System.out.println(" "+ i+1 + "\n");
+        }
+    }
+
+    public void elegirLado(){
+        boolean bandera;
+        do{
+            bandera = true;
+            System.out.println("Con que quiere jugar? (CRUZ o CIRCULO)");
+                if(!verificar(s.nextLine.toUpperCase())){bandera = false;
+            System.out.println("Respuesta Invalida");
+            }
+        }while(!bandera)
+        bot = Opciones.contrario(usuario);
+    }
+
+    public boolean verificar(String o){
+        if (o == Opciones.CRUZ || o == Opciones.CIRCULO){
+            return true;
+            usuario = o;
+        } else {return false;}
+    }
