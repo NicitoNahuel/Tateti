@@ -1,20 +1,24 @@
 public enum Opciones{
-    CRUZ, CIRCULO
-
     CRUZ{
         public String parseString(){
             return "X"
         }
-    }
+    },
 
     
     CIRCULO{
         public String parseString(){
             return "O"
         }
+    },
+    
+    VACIO;
+    
+    public String abstract parseString(){
+
     }
     
-      public Opciones contrario(Opciones o){
+    public Opciones abstract contrario(Opciones o){
         if(o == Opciones.CIRCULO){
         return Opciones.CRUZ;  
         } else {
@@ -22,4 +26,3 @@ public enum Opciones{
         } 
     }
 }
-
