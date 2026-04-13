@@ -25,8 +25,8 @@ public class Main /*implement EventListener*/
         }else{
             System.out.println("Empieza la maquina");
             do{
-                    turnoBot();
-                    turnoUsuario();
+                   // turnoBot();
+                   // turnoUsuario();
             }while(!ganador)
         }
     }
@@ -36,7 +36,7 @@ public class Main /*implement EventListener*/
         Random r = new Random
         r.nextBoolen()
     }
-
+/* 
     public void turnoBot(){
         mostrarTablero();
     }
@@ -44,7 +44,7 @@ public class Main /*implement EventListener*/
     public void turnoUsuario(){
         mostrarTablero();
     }
-
+*/
     public void volverAJugar(){
         boolean bandera;
         do{
