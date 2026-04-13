@@ -1,12 +1,12 @@
-
-public class Main{
+public class Main /*implement EventListener*/
+{
     public static void main(String[] args){
-        boolean jugar = true;
+        static boolean jugar = true;
         do{
             Opciones usuario, bot;
             Scanner s = new Scanner(System.in);
-            //puedo relegar el tablero y el bot a una clase tablero
-            Opciones[][] tablero = new Opciones[3][3];
+            Opciones[][] tablero = llenarTablero() 
+           
             elegirLado();
             juego();
             volverAJugar();
@@ -50,22 +50,13 @@ public class Main{
         do{
             bandera = true;
             System.out.println("Quiere volver a jugar? (si o no)");
-            a = s.nextLine
+            a.addEventListener() = s.nextLine
             if (!a = .equals("si") && !a.equals("no")) {
                 bandera = false
                 }else{
                     jugar = (a.equals("si"))?true:false;
                 }
         }while(!bandera)
-    }
-
-    public void mostrarTablero(){
-        for(int i = 0;i<3;i++){
-            for(int j = 0; j<3; j++){
-                System.out.println(tablero[i][j].parseString());
-            }
-             System.out.println(" "+ i+1 + "\n");
-        }
     }
 
     public void elegirLado(){
